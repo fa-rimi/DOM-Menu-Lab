@@ -1,5 +1,7 @@
 // * ========= Task 1.0 =========
-// Select and cache the <main>element in a variable named mainEl.
+// Select and cache the <main> element in a variable named mainEl.
+const mainEl = document.querySelector("main");
+console.log(mainEl);
 
 // * ========= Task 1.1 =========
 /**
@@ -10,13 +12,21 @@
  * like this: 'var(--main-bg)'
 
 **/
-
+mainEl.style.background = "var(--main-bg)";
 
 // * ========= Task 1.2 =========
 // Set the content of mainEl to <h1>SEI Rocks!</h1>.
 
+// Create an H1 element
+const h1Element = document.createElement("h1");
+h1Element.textContent = "SEI Rocks!";
 
+// Append the H1 element to the target element
+mainEl.appendChild(h1Element);
 
 // * ========= Task 1.3 =========
 // Add a class of flex-ctr to mainEl.
+mainEl.classList.add("flex-ctr")
+
+// ** Progress Check **
 
