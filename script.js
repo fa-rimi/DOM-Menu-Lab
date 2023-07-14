@@ -50,13 +50,43 @@ topMenuEl.classList.add("flex-around");
 // ** Progress Check **
 
 // * ========= Task 3.0 =========
-// Copy the following data structure to the top of script.js:
+// Copy the following data structure to the top of script.js: v1
 // Menu data structure
+// var menuLinks = [
+//   { text: "about", href: "/about" },
+//   { text: "catalog", href: "/catalog" },
+//   { text: "orders", href: "/orders" },
+//   { text: "account", href: "/account" },
+// ];
+
 var menuLinks = [
   { text: "about", href: "/about" },
-  { text: "catalog", href: "/catalog" },
-  { text: "orders", href: "/orders" },
-  { text: "account", href: "/account" },
+  {
+    text: "catalog",
+    href: "#",
+    subLinks: [
+      { text: "all", href: "/catalog/all" },
+      { text: "top selling", href: "/catalog/top" },
+      { text: "search", href: "/catalog/search" },
+    ],
+  },
+  {
+    text: "orders",
+    href: "#",
+    subLinks: [
+      { text: "new", href: "/orders/new" },
+      { text: "pending", href: "/orders/pending" },
+      { text: "history", href: "/orders/history" },
+    ],
+  },
+  {
+    text: "account",
+    href: "#",
+    subLinks: [
+      { text: "profile", href: "/account/profile" },
+      { text: "sign out", href: "/account/signout" },
+    ],
+  },
 ];
 
 // * ========= Task 3.1 =========
@@ -82,3 +112,61 @@ for (let link of menuLinks) {
 }
 
 // *** DONE ***
+
+// * ========= Task 4.0 =========
+// Select and cache the <nav id="sub-menu">element in a variable named subMenuEl.
+const subMenuEl = document.querySelector("#sub-menu");
+// * ========= Task 4.1 =========
+// Set the height subMenuEl element to be 100%.
+subMenuEl.style.height = "100%";
+
+// * ========= Task 4.2 =========
+// Set the background color of subMenuEl to the value stored in the --sub-menu-bg CSS custom property.
+subMenuEl.style.backgroundColor = "var(--sub-menu-bg)";
+console.log(subMenuEl);
+
+// * ========= Task 4.3 =========
+// Add the class of flex-around to the subMenuEl element
+subMenuEl.classList.add("flex-around");
+
+// ** Progress Check **
+
+// * ========= Task 4.4 =========
+// Set the CSS position property of subMenuEl to the value of absolute.
+subMenuEl.style.position = "absolute";
+
+// * ========= Task 4.5 =========
+// Set the CSS top property of subMenuEl to the value of 0.
+subMenuEl.style.top = "0";
+
+// * ========= Task 5.0 =========
+// Update the menuLinks array in script.js (done above)
+console.log(subMenuEl);
+
+// * ========= Task 5.1 =========
+/**
+ * Select and cache the all of the <a>elements inside of topMenuEl in a
+ * variable named topMenuLinks.
+ *
+ * Declare a global showing SubMenu variable and initialize it to false;
+ */
+
+// * ========= Task 5.2 =========
+/**
+ * Attach a delegated 'click' event listener to topMenuEl.
+ *
+ * The first line of code of the event listener function should call
+ * the event object's preventDefault()method.
+ *
+ * The second line of code function should immediately return if the
+ * element clicked was not an <a>element.
+ *
+ * console.log the content of the <a>to verify the handler is working.
+ *
+ */
+
+// ** Progress Check **
+
+// * ========= Task 5.3 =========
+
+// * ========= Task 5.4 =========
